@@ -1,28 +1,45 @@
-/**/
-
-
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight:400;
-    font-size:14px;
-    /*font weights:
+/*
+Open Sans font weights -
     light 300
     regular 400
     bold 700
-    */
+*/
+
+body {
+    background:#818181;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:400;
+    font-size:14px;
 }
 
 .container {
     max-width:1180px; /*985 for inner content*/
+    background:white;
+    padding:0;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
 
+/*header - nav*/
 .header {
-    height:65px;
-    width:100%;
-    background:#000;
-    padding:5px 100px;
+    height: 65px;
+    background: black;
+    position: fixed;
+    width: 1170px;
+    z-index: 1000;
+}
+
+@media (max-width:1200px) {
+    /*.header {
+        max-width:100%;
+    }*/
+}
+
+.header > div {
+    padding:5px 0;
 }
 
 .logo img {
@@ -30,14 +47,264 @@ body {
     height:auto;
 }
 
-nav {
+nav.navbar {
     font-weight:300;
     text-transform: uppercase;
     font-size:1.286em;
     padding:15px 0;
 }
 
-nav a {
-    color:#FFFFFF;
+nav.navbar a {
+    color:white;
     padding: 20px;
+}
+
+nav.navbar a:hover,
+nav.navbar a:focus {
+    color: white;
+    text-decoration-line: overline;
+    text-decoration-color: #f13124;
+}
+
+nav.nav-hamburger a {
+    color:white;
+    padding: 20px 0;
+    font-size:1.5em;
+    width:100%;
+}
+
+nav.nav-hamburger  {
+    font-weight:700;
+    font-size:0.85em;
+}
+
+nav.nav-hamburger a {
+    color: white;
+}
+
+nav.nav-hamburger a.main-toggle {
+    font-size: 2em;
+    position: relative;
+    right: 25px;
+    top: 10px;
+}
+
+nav.nav-hamburger div  {
+    border-top:1px solid gray;
+    background-color:black;
+    width:100%;
+    position: relative;
+    top: 13px;
+}
+
+nav.nav-hamburger div a {
+    font-size:1.2em;
+    float:left;
+    text-transform: uppercase;
+    padding:10px;
+}
+
+nav.nav-hamburger div a:hover {
+    text-decoration: none;
+    color:#f13124;
+}
+
+/*main*/
+main {
+    width:100%;
+    margin-top:65px;
+}
+
+main .hero {
+    /*min-height:450px;*/
+}
+
+main .hero img {
+    width:375px;
+    height:711px;
+}
+
+@media(max-width:1600px) {
+    main .hero img {
+        width:100%;
+        height:auto;
+    }
+}
+
+@media(max-width:767px) {
+    main .hero div:nth-child(1) {
+        display: none;
+    }
+}
+
+main h1,
+main h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight:300;
+}
+
+main h1 {
+    text-transform: uppercase;
+    color:#f13124;
+    font-size: 6.7em;
+    letter-spacing: -0.035em;
+    line-height: 0.94;
+    margin: 50px 0 0 0;
+}
+
+main .hero h3 {
+    color:#666666;
+    font-size:1.75em;
+    line-height:2;
+}
+
+@media(max-width:1600px) {
+    main h1 {
+        font-size:2.5em;
+        line-height:1;
+        padding: 0 40px 0 0;
+    }
+
+    main .hero h3 {
+        font-size:1.5em;
+        line-height:1.8;
+    }
+}
+
+main .featured {
+    width:100%;
+    height:538px;
+    background:url('images/featured.jpg') top center no-repeat;
+    background-size:cover;
+}
+
+main .featured div {
+    padding:13% 15%;
+}
+
+main .featured h3 {
+    color:white;
+    font-size:2em;
+    line-height:1.8;
+}
+
+@media(max-width:1200px) {
+    main .featured div {
+        padding:14% 10%;
+    }
+}
+
+@media(max-width:768px) {
+    main .featured div {
+            padding:5% 10%;
+    }
+}
+
+@media(max-width:480px) {
+
+    main .featured h3 {
+        font-size:1.6em;
+        line-height:1.7;
+    }*
+}
+
+/*footer*/
+footer {
+    clear:both; /*! why do we need this*/
+    background:#f13124;
+    height:290px;
+    width:100%;
+    padding: 25px 0;
+}
+
+footer > div {
+    background:#f13124;
+}
+
+@media(max-width:767px) {
+    footer {
+        background:transparent;
+        height:100%;
+        padding:0;
+    }
+
+    footer div {
+        min-height:300px;
+    }
+}
+
+@media(max-width:767px) {
+    footer > div > div {
+        padding: 25px 0;
+        border-bottom: 1px dotted white;
+    }
+
+    footer ul {
+        padding:0;
+    }
+}
+
+footer h4 {
+    color: white;
+    text-transform: uppercase;
+    font-size:1em;
+}
+
+footer h5 {
+    color: black;
+    margin-bottom:0;
+}
+
+footer p,
+footer address {
+    color:black;
+}
+
+footer a,
+footer a:hover {
+    color:white;
+    padding:15px 2px;
+}
+
+footer a:hover i {
+    text-decoration:underline;
+}
+
+footer div div:nth-of-type(2) {
+    padding: 15px 25px;
+}
+
+footer div div:nth-of-type(2) a:hover,
+footer div div:nth-of-type(2) a:hover i {
+    text-decoration:none;
+}
+
+footer div div:nth-of-type(4) i {
+    background-color:transparent;
+    color:white;
+}
+
+footer ul li {
+    list-style-type: none;
+    line-height:3em;
+}
+
+span i.fa-stack-white {
+    color: white;
+    font-size:32px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+}
+
+span > i:nth-child(2) {
+    font-size: 35px;
+    color:black;
+}
+
+span i.fa-stack-white {
+    height:auto;
+}
+
+a:hover i.fa-stack-white {
+    color:#f13124;
 }

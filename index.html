@@ -1,10 +1,10 @@
 <!doctype html>
 <!--<html lang="en" ng-app="gage" ng-controller="GageCtrl">-->
-<html lang="en">
+<html lang="en" ng-app="gage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Design Challenge | Gage </title>
+    <title>Design Challenge | Gage Marketing </title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js" data-group="cdn"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -27,31 +27,136 @@
 <body>
 <section class="container">
     <header class="header">
-        <div class="col-xs-12">
-            <div class="col-md-4 pull-left">
+        <div class="col-xs-12 col-md-11 col-md-offset-1">
+            <div class="col-xs-2 col-md-3 col-lg-5">
                 <div class="logo">
-                    <img class="img-responsive" src="/css/images/gagelogo_normal-300x129.png" alt="Gage"  />
+                    <a href="#">
+                        <img src="/css/images/gagelogo_normal-300x129.png" alt="Gage"  />
+                    </a>
                 </div>
             </div>
-            <div class="col-md-8 pull-right text-right">
-                <nav>
+            <div class="col-xs-7 col-md-6 text-right hidden-xs">
+                <nav class="navbar">
                     <a href="#">work</a>
                     <a href="#">thinking</a>
                     <a href="#">offerings</a>
                     <a href="#">contact</a>
                 </nav>
             </div>
+            <div class="visible-xs">
+                <hamburgernavigation></hamburgernavigation>
+            </div>
         </div>
     </header>
     <main>
-        <h1>Page Title</h1>
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12 col-md-10 col-md-offset-1">
+                    <div class="row">
+                        <!--TODO: background image for better load?-->
+                        <div class="hero">
+                            <div class="col-sm-4 pull-left">
+                                <img src="/css/images/woman.png" alt="Bringing Engagement to Life"  />
+                            </div>
+                            <div class="col-xs-12 col-sm-7 col-sm-offset-1">
+                                <h1>Bringing Engagement to Life</h1>
+                                <h3>Gage combines marketing and technology to drive customer engagement. We create engagement ecosystems of e-learning, channel empowerment, sweepstakes,
+                                    loyalty and next-generation social communities for the world’s leading and emerging brands.
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="featured">
+                    <div>
+                        <h3>
+                            Our work is designed around the customer experience and is driven by strategic content, smart data and the best technical platforms. We put it all together
+                            to deliver engagement your customers value from your brand, via the media, channels and devices they prefer.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
+        <div class="col-xs-12 col-md-11 col-md-offset-1">
+            <div class="col-xs-12 col-md-4">
+                <h4>Join Our Team</h4>
+                <p>Want to join a highly motivated team working on world-class projects?
+                    Gage is currently looking for an <a target="_blank" href="http://www.gage.com/jobs-at-gage">Experience Designer</a> to join our team.
+                </p>
+                <a href="mailto:jobs@gage.com">jobs@gage.com</a>
+            </div>
+            <div class="col-xs-12 col-md-3">
 
+                <a href="#">
+                    <span class="fa-stack">
+                        <i class="fa fa-square fa-stack fa-stack-1x fa-stack-white"></i>
+                        <i class="fa fa-twitter-square fa-stack-1x"></i>
+                    </span>
+                </a>
+
+                <a href="#">
+                    <span class="fa-stack">
+                        <i class="fa fa-square fa-stack fa-stack-1x fa-stack-white"></i>
+                        <i class="fa fa-facebook-square fa-stack-1x"></i>
+                    </span>
+                </a>
+
+                <a href="#">
+                    <span class="fa-stack">
+                        <i class="fa fa-square fa-stack fa-stack-1x fa-stack-white"></i>
+                        <i class="fa fa-youtube-square fa-stack-1x"></i>
+                    </span>
+                </a>
+
+                <a href="#">
+                    <span class="fa-stack">
+                        <i class="fa fa-square fa-stack fa-stack-1x fa-stack-white"></i>
+                        <i class="fa fa-google-plus-square fa-stack-1x"></i>
+                    </span>
+                </a>
+
+                <a href="#">
+                    <span class="fa-stack">
+                        <i class="fa fa-square fa-stack fa-stack-1x fa-stack-white"></i>
+                        <i class="fa fa-linkedin-square fa-stack-1x"></i>
+                    </span>
+                </a>
+
+            </div>
+            <div class="col-xs-12 col-md-2">
+                <h4>Locations</h4>
+                <h5>Minneapolis</h5>
+                <address>
+                    10000 Hwy 55<br />
+                    Plymouth, MN 55441<br />
+                    <a href="tel:763-595-3800">763.595.3800</a>
+                </address>
+                <h5>Seattle</h5>
+                <address>
+                    506 Second Avenue<br />
+                    Suite 14<br />
+                    Seattle, WA 98104<br />
+                    <a href="tel:206-330-6396">206.330.6396</a>
+                </address>
+            </div>
+            <div class="col-xs-12 col-md-2">
+                <ul>
+                    <li><a href="#">Blog <i class="fa fa-angle-double-right"></i></a></li>
+                    <li><a href="#">Whitepapers <i class="fa fa-angle-double-right"></i></a></li>
+                    <li><a href="#">Careers <i class="fa fa-angle-double-right"></i></a></li>
+                    <li><a href="#">About <i class="fa fa-angle-double-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 
 </section>
-
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js" data-group="cdn"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-sanitize.min.js" data-group="cdn"></script>
@@ -61,6 +166,9 @@
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.min.js" data-group="cdn"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-touch.min.js" data-group="cdn"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-loader.min.js" data-group="cdn"></script>
+
+<script src="js/app.js" data-group="resources"></script>
+<script src="js/hamburgerNavigation.js" data-group="resources"></script>
 
 </body>
 <!-- <![endif]-->
